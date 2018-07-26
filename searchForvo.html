@@ -4,18 +4,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
     <link rel="manifest" href="manifest.json">
-    
+
     <title>Search web share with Forvo</title>
 
     <link rel="shortcut icon" type="image/png" href="searchForvoIcons/icon128.png" />
 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="theme-color" content="#111111"/>    
+    
 </head>
+
 <body>
+  <h1>Search web share with Forvo</h1>
     <script>
         'use strict';
     if ('serviceWorker' in navigator) {
@@ -53,7 +56,7 @@
     window.addEventListener('load', onLoad);
 
         // when shared text is detected, replace location
-        window.location.replace("https://forvo.com/search/" + parsedUrl.searchParams.get("text"));
+        // window.location.replace("https://forvo.com/search/" + parsedUrl.searchParams.get("text"));
     </script>
 </body>
 </html>
