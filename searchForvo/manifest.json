@@ -2,7 +2,7 @@
   "name": "Search Forvo",
   "short_name": "Search Forvo",
   "start_url": "index.html",
-  "display": "fullscreen",
+  "display": "standalone",
   "share_target": {
     "url_template": "index.html?oldapi=true&title={title}&text={text}&url={url}",
     "action": "index.html",
