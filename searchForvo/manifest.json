@@ -13,25 +13,28 @@
     }
   },
   "icons": [{
-    "src": "searchForvoIcons/icon-16.png",
+    "src": "searchForvoIcons/icon16.png",
     "sizes": "16x16"
   }, {
-    "src": "searchForvoIcons/icon-32.png",
+    "src": "searchForvoIcons/icon32.png",
     "sizes": "32x32"
   }, {
-    "src": "searchForvoIcons/icon-48.png",
+    "src": "searchForvoIcons/icon48.png",
     "sizes": "48x48"
   }, {
-    "src": "searchForvoIcons/icon-128.png",
+    "src": "searchForvoIcons/icon128.png",
     "sizes": "128x128"
   }, {
-    "src": "searchForvoIcons/icon-180.png",
+    "src": "searchForvoIcons/icon180.png",
     "sizes": "180x180"
   }, {
-    "src": "searchForvoIcons/icon-256.png",
+      "src": "searchForvoIcons/icon192.png",
+      "sizes": "192x192"
+  }, {
+    "src": "searchForvoIcons/icon256.png",
     "sizes": "256x256"
   }, {
-    "src": "searchForvoIcons/icon-512.png",
+    "src": "searchForvoIcons/icon512.png",
     "sizes": "512x512"
   }],
   "theme_color": "#111111",
