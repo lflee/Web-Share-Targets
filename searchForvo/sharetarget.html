@@ -1,14 +1,13 @@
 <!-- Parts of this file are copied from https://github.com/WICG/web-share-target/blob/master/demos/sharetarget.html.
   -->
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="manifest" href="manifest.json">
 
     <title>Search web share with Forvo</title>
 
-    <link rel="shortcut icon" type="image/png" href="searchForvoIcons/icon128.png" />
+    <link rel="shortcut icon" type="image/png" href="searchForvoIcons/favicon.ico" />
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,15 +21,16 @@
     <div id="output"></div>
 
     <script>
-        'use strict';
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').then(registration => {
-        console.log('ServiceWorker registration successful with scope:',
+      'use strict';
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').then(registration => {
+          console.log('ServiceWorker registration successful with scope:',
                     registration.scope);
       }).catch(err => {
         console.error('ServiceWorker registration failed:', err);
       });
     }
+    
     function logText(message, isError) {
       if (isError)
         console.error(message);
