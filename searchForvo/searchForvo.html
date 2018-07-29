@@ -20,6 +20,7 @@
 <body>
   <h1>Search web share with Forvo</h1>
     <div id="output"></div>
+
     <script>
         'use strict';
     if ('serviceWorker' in navigator) {
@@ -41,6 +42,7 @@
       document.querySelector('#output').appendChild(p);
       p.appendChild(document.createTextNode(message));
     }
+    
     function onLoad() {
       var parsedUrl = new URL(window.location.toString());
       logText("Title shared: " + parsedUrl.searchParams.get("title"));
