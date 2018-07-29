@@ -1,11 +1,11 @@
 {
   "name": "Search Forvo",
   "short_name": "Search Forvo",
-  "start_url": "sharetarget.html",
-  "display": "standalone",
+  "start_url": "index.html",
+  "display": "fullscreen",
   "share_target": {
-    "url_template": "sharetarget.html?oldapi=true&title={title}&text={text}&url={url}",
-    "action": "sharetarget.html",
+    "url_template": "index.html?oldapi=true&title={title}&text={text}&url={url}",
+    "action": "index.html",
     "params": {
       "title": "title",
       "text": "text",

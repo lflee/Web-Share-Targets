@@ -55,11 +55,13 @@
         logText("Your browser is using the deprecated 'url_template' Web Share "
                 + "Target API.", true);
       }
+
+
+        // when shared text is detected, replace location
+      window.location.replace("https://forvo.com/search/" + parsedUrl.searchParams.get("text"));
     }
     window.addEventListener('load', onLoad);
 
-        // when shared text is detected, replace location
-        // window.location.replace("https://forvo.com/search/" + parsedUrl.searchParams.get("text"));
     </script>
 </body>
 </html>
