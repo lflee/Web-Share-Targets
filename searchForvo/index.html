@@ -18,6 +18,19 @@
 
 <body>
   <h1>Search web share with Forvo</h1>
+  <div>
+    <p>
+      This is a Progressive Web App (PWA) developed by <a href="https://twitter.com/LLF" target="_blank"></a>峰</a>. If you think you recognize his avatar and want to verify, just ping him (WhatsApp, WeChat, whatever.) If you are in doubt, quit read along and quit this page.
+    </p>
+    <p>
+      <h2>How it works?</h2>
+      <h3>One time set up</h3>
+      A bar should have popped up at the bottom of the page. Tap it and add it to your home sceen. 
+      <h3>To use it</h3>
+      After installed (added), in any Android app where you can select some text, select some, the menu options (COPY, SHARE, SELECT ALL, etc) would appear, tap SHARE. Then you will find this PWA in the list. Select it, then you will be directed to the search page of the select text by Forvo.
+    </p>
+
+  </div>
     <div id="output"></div>
 
     <script>
@@ -56,9 +69,10 @@
                 + "Target API.", true);
       }
 
-
+      if (parsedUrl.searchParams.get("text") != null){
         // when shared text is detected, replace location
-      window.location.replace("https://forvo.com/search/" + parsedUrl.searchParams.get("text"));
+        window.location.replace("https://forvo.com/search/" + parsedUrl.searchParams.get("text"));
+      }
     }
     window.addEventListener('load', onLoad);
 
