@@ -36,7 +36,7 @@
 
   <div id="Redirect"></div>
 
-  <!-- <div id="output">Below is for debug purpose, please ignore</div> -->
+  <div id="output">Below is for debug purpose, please ignore</div>
 
     <script>
       'use strict';
@@ -49,23 +49,23 @@
       });
     }
     
-    // function logText(message, isError) {
-    //   if (isError)
-    //     console.error(message);
-    //   else
-    //     console.log(message);
-    //   var p = document.createElement('p');
-    //   if (isError)
-    //     p.setAttribute('class', 'error');
-    //   document.querySelector('#output').appendChild(p);
-    //   p.appendChild(document.createTextNode(message));
-    // }
+    function logText(message, isError) {
+      if (isError)
+        console.error(message);
+      else
+        console.log(message);
+      var p = document.createElement('p');
+      if (isError)
+        p.setAttribute('class', 'error');
+      document.querySelector('#output').appendChild(p);
+      p.appendChild(document.createTextNode(message));
+    }
     
     function onLoad() {
       var parsedUrl = new URL(window.location.toString());
-      // logText("Title shared: " + parsedUrl.searchParams.get("title"));
-      // logText("Text shared: " + parsedUrl.searchParams.get("text"));
-      // logText("URL shared: " + parsedUrl.searchParams.get("url"));
+      logText("Title shared: " + parsedUrl.searchParams.get("title"));
+      logText("Text shared: " + parsedUrl.searchParams.get("text"));
+      logText("URL shared: " + parsedUrl.searchParams.get("url"));
       // We still have the old "url_template" member in the manifest, which is
       // how WST was previously specced and implemented in Chrome. If the user
       // agent uses that method, the "oldapi" parameter will be set.
