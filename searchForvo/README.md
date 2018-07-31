@@ -1,6 +1,8 @@
 # Search Forvo (a progressive web app which works on Android)
 
-This is a Progressive Web App (PWA) developed by [峰](https://twitter.com/llf){:target="_blank"}. If you think you recognize his avatar and want to verify, just ping him in person (WhatsApp, WeChat, whatever.) If you are in doubt with what is presented here so far, quit read along and quit this page.
+BETA release
+
+This is a Progressive Web App (PWA) developed by [峰](https://twitter.com/llf). If you think you recognize his avatar and want to verify, just ping him in person (WhatsApp, WeChat, whatever.) If you are in doubt with what is presented here so far, quit read along and quit this page.
 
 ## How does it work?
 
@@ -10,3 +12,4 @@ IF you don't see the bar, tap the top right 3-dot menu > "Add to Home screen" to
 
 ### To use it
 After installed (added), in any Android app where you can select some text, select some, the menu options (COPY, SHARE, SELECT ALL, etc) would appear, tap SHARE. Then you will find this PWA (named "Search Forvo") in the list. Tap it, then you will be directed to the Forvo search page for the select text.
+To go back to the source app, just tap the system Back button.
