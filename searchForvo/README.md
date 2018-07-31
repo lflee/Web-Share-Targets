@@ -7,6 +7,7 @@ This is a Progressive Web App (PWA) developed by [峰](https://twitter.com/llf).
 ## How does it work?
 
 ### One time set up
+Go to [https://lflee.github.io/Web-Share-Targets/searchForvo/](https://lflee.github.io/Web-Share-Targets/searchForvo/).
 A bar should have popped up at the bottom of the page. Tap it and add it to your home sceen. 
 IF you don't see the bar, tap the top right 3-dot menu > "Add to Home screen" to proceed.
 
