@@ -1,6 +1,6 @@
 # Search Forvo (a progressive web app which works on Android)
 
-This is a Progressive Web App (PWA) developed by [峰](twitter.com/llf). If you think you recognize his avatar and want to verify, just ping him in person (WhatsApp, WeChat, whatever.) If you are in doubt with what is presented here so far, quit read along and quit this page.
+This is a Progressive Web App (PWA) developed by <a href="" target="_blank">峰</a>. If you think you recognize his avatar and want to verify, just ping him in person (WhatsApp, WeChat, whatever.) If you are in doubt with what is presented here so far, quit read along and quit this page.
 
 ## How does it work?
 
