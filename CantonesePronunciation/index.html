@@ -85,7 +85,7 @@
         document.getElementById("Redirect").innerHTML = "Redirecting..." ;
 
         // when shared text is detected, replace location
-        window.location.replace("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search/search.php?word=" + parsedUrl.searchParams.get("text"));
+        window.location.replace("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=" + parsedUrl.searchParams.get("text"));
       }
     }
     window.addEventListener('load', onLoad);
