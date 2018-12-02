@@ -4,10 +4,10 @@ BETA release
 
 This is a Progressive Web App (PWA) developed by [峰](https://twitter.com/llf). If you think you recognize his avatar and want to verify, just ping him in person (WhatsApp, WeChat, whatever.) If you are in doubt with what is presented here so far, quit read along and quit this page.
 
-## How does it work?
+## How it works?
 
 ### One time set up
-Go to [https://lflee.github.io/Web-Share-Targets/searchForvo/](https://lflee.github.io/Web-Share-Targets/searchForvo/).
+Go to [https://lflee.github.io/Web-Share-Targets/CantonesePronunciation/](https://lflee.github.io/Web-Share-Targets/CantonesePronunciation/).
 A bar should have popped up at the bottom of the page. Tap it and add it to your home sceen. 
 IF you don't see the bar, tap the top right 3-dot menu > "Add to Home screen" to proceed.
 
