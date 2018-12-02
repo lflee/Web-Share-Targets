@@ -7,19 +7,19 @@
 <head>
     <link rel="manifest" href="manifest.json">
 
-    <title>Search web share with Forvo</title>
+    <title>Search Multi-function Chinese Character Database (a web share target)</title>
 
-    <link rel="shortcut icon" type="image/png" href="searchForvoIcons/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="icons/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Author: 峰,
-                                      Keywords: Forvo search 
-    ">
+                                      Keywords: Search Multi-function Chinese Character Database 
+                                     ">
     <meta name="theme-color" content="#111111"/>    
 </head>
 
 <body>
   <div id="Intro">
-    <h1>Search Forvo (a progressive web app which works on Android)</h1>
+    <h1>Search Multi-function Chinese Character Database (a web share target, a progressive web app which works on Android)</h1>
     <div>
       <p>
         This is a Progressive Web App (PWA) developed by <a href="https://twitter.com/LLF" target="_blank" rel="noopener">峰</a>. If you think you recognize his avatar and want to verify, just ping him in person (WhatsApp, WeChat, whatever.) If you are in doubt with what is presented here so far, quit read along and quit this page.
@@ -31,7 +31,7 @@
         A bar should have popped up at the bottom of the page. Tap it and add it to your home sceen.<br />
         IF you don't see the bar, tap the top right 3-dot menu > "Add to Home screen" to proceed.
         <h3>To use it</h3>
-        After installed (added), in any Android app where you can select some text, select some, the menu options (COPY, SHARE, SELECT ALL, etc) would appear, tap SHARE. Then you will find this PWA in the list. Select it, then you will be directed to the search page of the select text by Forvo.
+        After installed (added), in any Android app where you can select some text, select some, the menu options (COPY, SHARE, SELECT ALL, etc) would appear, tap SHARE. Then you will find this PWA in the list. Select it, then you will be directed to the search page of the select text by <a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/" target="_blank" rel="noopener">Multi-function Chinese Character Database</a>.
       </p>
 
     </div>
@@ -85,7 +85,7 @@
         document.getElementById("Redirect").innerHTML = "Redirecting..." ;
 
         // when shared text is detected, replace location
-        window.location.replace("https://forvo.com/search/" + parsedUrl.searchParams.get("text"));
+        window.location.replace("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search/search.php?word=" + parsedUrl.searchParams.get("text"));
       }
     }
     window.addEventListener('load', onLoad);
