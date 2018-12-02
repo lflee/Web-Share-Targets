@@ -1,6 +1,6 @@
 {
-  "name": "Search Forvo",
-  "short_name": "Search Forvo",
+  "name": "Search Multi-function Chinese Character Database",
+  "short_name": "Search lexi-mf",
   "start_url": "index.html",
   "display": "standalone",
   "share_target": {
