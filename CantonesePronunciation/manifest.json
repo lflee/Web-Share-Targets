@@ -1,6 +1,6 @@
 {
-  "name": "Search 漢語多功能詞庫",
-  "short_name": "Search lexi-mf",
+  "name": "Search 漢語多功能字庫",
+  "short_name": "Search 漢語多功能字庫",
   "start_url": "index.html",
   "display": "standalone",
   "share_target": {
