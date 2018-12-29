@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+  @font-face {
+      font-family: freehkfonts;
+      src: url('fonts/Free-HK-Kai_4700-v1.02.ttf');
+  }
+  div.bigfont {
+    font-size: 48px;
+  }
+  #footer {
+    font-size: 24px;
+  }
+  textarea.bigfont {
+    font-size: 48px;
+  }
+  .freehkkai {
+      font-family: freehkfonts;
+  }
+</style>
+
+<head>
+    <link rel="manifest" href="manifest.json">
+
+    <title>✔ check 吓用自由香港楷書出啲字係咩樣 🤔</title>
+
+    <link rel="shortcut icon" type="image/png" href="icons/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Author: 峰,
+                                      Keywords: 自由香港楷書 
+                                     ">
+    <meta name="theme-color" content="#111111"/>    
+</head>
+
+<body>
+  <div id="Intro">
+    <h1>✔ check 吓用自由香港楷書出啲字係咩樣 🤔</h1>
+    <div>
+      <p>
+        依個係由 <a href="https://twitter.com/LLF" target="_blank" rel="noopener">峰</a> 製作嘅 App.
+      </p>
+      <p>
+        <h2>點用?</h2>
+        <h3>只須 set up 一次</h3>
+        用 Chrome for Android 睇依一頁，你應該會見到畫面下方有一條 "加到 ?桌面?" 嘅 bar，撳佢一吓，再撳 "?加?" 確定。(如果你唔見條 bar, 你可以去 Chrome 右上角嘅 "打棟3點 icon" > ?加到主頁? )</br>       
+        <h3>Set up 完之後…</h3>
+        喺任何可以揀字嘅 app 裏面，長撳揀啲字，你會見到 複製、分享、全部選取 等等選項，撳 <b>分享</b>. 跟住你會見到個 "楷" 字 icon 嘅 app. 撳佢，跟住個 app 就會用 <a href="https://freehkfonts.opensource.hk/download/" target="_blank" rel="noopener">自由香港楷書</a> 嚟顯示你頭先揀嚟 share 嘅字句。
+      </p>
+
+    </div>
+  </div>
+
+  <div id="Redirect"></div>
+
+  <div>***</div>
+
+  <div id="output"><i>Below is for debug purpose only, please ignore</i></div>
+
+    <script>
+      'use strict';
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').then(registration => {
+          console.log('ServiceWorker registration successful with scope:',
+                    registration.scope);
+      }).catch(err => {
+        console.error('ServiceWorker registration failed:', err);
+      });
+    }
+    
+    function logText(message, isError) {
+      if (isError)
+        console.error(message);
+      else
+        console.log(message);
+      var p = document.createElement('p');
+      if (isError)
+        p.setAttribute('class', 'error');
+      document.querySelector('#output').appendChild(p);
+      p.appendChild(document.createTextNode(message));
+    }
+    
+    function onLoad() {
+      var parsedUrl = new URL(window.location.toString());
+      logText("Title shared: " + parsedUrl.searchParams.get("title"));
+      logText("Text shared: " + parsedUrl.searchParams.get("text"));
+      logText("URL shared: " + parsedUrl.searchParams.get("url"));
+      // We still have the old "url_template" member in the manifest, which is
+      // how WST was previously specced and implemented in Chrome. If the user
+      // agent uses that method, the "oldapi" parameter will be set.
+      if (parsedUrl.searchParams.get("oldapi")) {
+        logText("Your browser is using the deprecated 'url_template' Web Share "
+                + "Target API.", true);
+      }
+
+      if (parsedUrl.searchParams.get("text") != null){
+        
+        document.getElementById("Intro").style.display = "none" ;
+        document.getElementById("Redirect").innerHTML = "Redirecting..." ;
+
+        // when shared text is detected, replace location
+        window.location.replace("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=" + parsedUrl.searchParams.get("text"));
+      }
+    }
+    window.addEventListener('load', onLoad);
+
+    </script>
+</body>
+</html>
