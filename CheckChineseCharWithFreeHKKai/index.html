@@ -16,7 +16,10 @@
   textarea.bigfont {
     font-size: 48px;
   }
-  .freehkkai {
+  .freehkkai_v1_02 {
+      font-family: freehkfonts;
+  }
+  .freehkkai_extended {
       font-family: freehkfonts;
   }
 </style>
@@ -34,11 +37,11 @@
     <meta name="theme-color" content="#111111"/>    
 </head>
 
-<body>
+<body class="freehkkai_extended">
   <div id="Intro">
-    <h1  class="freehkkai">✔ check 吓用自由香港楷書出啲字係咩樣 🤔</h1>
+    <h1>✔ check 吓用「自由香港楷書」出啲字係咩樣 🤔</h1>
     <div>
-      <p class="freehkkai">
+      <p>
         依個係由 <a href="https://twitter.com/LLF" target="_blank" rel="noopener">峰</a> 製作嘅 app.
       </p>
       <p>
@@ -57,6 +60,11 @@
   <div>***</div>
 
   <div id="output"><i>Below is for debug purpose only, please ignore</i></div>
+
+  <div id="SharedText">你 share 出嚟嘅字，用「自由香港楷書」嘅話會係以下咁嘅樣
+    
+  </div>
+
 
     <script>
       'use strict';
@@ -97,10 +105,15 @@
       if (parsedUrl.searchParams.get("text") != null){
         
         document.getElementById("Intro").style.display = "none" ;
-        document.getElementById("Redirect").innerHTML = "Redirecting..." ;
+        document.getElementById("SharedText").style.display = "block" ;
+
+        // to do
+        // logic to change div to display shared text
+
+        // document.getElementById("Redirect").innerHTML = "Redirecting..." ;
 
         // when shared text is detected, replace location
-        window.location.replace("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=" + parsedUrl.searchParams.get("text"));
+        // window.location.replace("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=" + parsedUrl.searchParams.get("text"));
       }
     }
     window.addEventListener('load', onLoad);
