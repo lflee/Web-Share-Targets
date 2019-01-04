@@ -61,9 +61,9 @@
 
   <!-- <div id="output"><i>Below is for debug purpose only, please ignore</i></div> -->
 
-  <div id="SharedText">你 share 出嚟嘅字，用「自由香港楷書」嘅話會係以下咁嘅樣
+  <div id="SharedTextIntro">你 share 出嚟嘅字，用「自由香港楷書」嘅話會係以下咁嘅樣
 
-    <h1 id=></h1>
+    <h1 id="SharedText"></h1>
 
   </div>
 
@@ -104,12 +104,14 @@
                 + "Target API.", true);
       }
 
-      if (parsedUrl.searchParams.get("text") != null){
-        var SharedText = parsedUrl.searchParams.get("text") ;
+      document.getElementById("SharedText").value = "This element is SharedText" ;
 
-        document.getElementById("Intro").style.display = "none" ;
-        document.getElementById("SharedText").style.display = "block" ;
-        document.getElementById("SharedText").value = SharedText ;
+      // if (parsedUrl.searchParams.get("text") != null){
+      //   var SharedText = parsedUrl.searchParams.get("text") ;
+
+      //   document.getElementById("Intro").style.display = "none" ;
+      //   document.getElementById("SharedText").style.display = "block" ;
+      //   document.getElementById("SharedText").value = SharedText ;
       }
     }
     window.addEventListener('load', onLoad);
