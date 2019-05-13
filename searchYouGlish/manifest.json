@@ -13,7 +13,7 @@
     }
   },
   "icons": [{
-    "src": "searchForvoIcons/icon512.png",
+    "src": "icons/icon512.png",
     "sizes": "512x512"
   }],
   "theme_color": "#111111",
