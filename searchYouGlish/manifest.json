@@ -1,0 +1,21 @@
+{
+  "name": "Search YouGlish",
+  "short_name": "Search YouGlish",
+  "start_url": "index.html",
+  "display": "standalone",
+  "share_target": {
+    "url_template": "index.html?oldapi=true&title={title}&text={text}&url={url}",
+    "action": "index.html",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "icons": [{
+    "src": "searchForvoIcons/icon512.png",
+    "sizes": "512x512"
+  }],
+  "theme_color": "#111111",
+  "background_color": "#ffffff"
+}

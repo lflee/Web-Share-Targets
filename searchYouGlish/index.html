@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<!-- Parts of this file are copied from https://github.com/WICG/web-share-target/blob/master/demos/sharetarget.html.
+  -->
+
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+
+    <title>Search YouGlish</title>
+
+    <link rel="shortcut icon" type="image/png" href="icons/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Author: 峰,
+                                      Keywords: Search YouGlish 
+    ">
+    <meta name="theme-color" content="#101010"/> <!-- color 🙄 -->   
+</head>
+
+<body>
+  <div id="Intro">
+    <h1>Search YouGlish (a <a href="https://en.wikipedia.org/wiki/Progressive_web_applications" target="_blank" rel="noopener">progressive web app</a> which works on Android)</h1>
+    <div>
+      <p>
+        This is a Progressive Web App (PWA) developed by <a href="https://twitter.com/LLF" target="_blank" rel="noopener">峰</a>. If you think you recognize his avatar and want to verify, just ping him in person (WhatsApp, WeChat, whatever.) If you are in doubt with what is presented here so far, quit read along and quit this page.
+      </p>
+      <p>
+        <h2>How it works?</h2>
+        <h3>One time set up</h3>
+        Open this current page in <a href="https://play.google.com/store/apps/details?id=com.android.chrome" target="_blank" rel="noopener">Chrome for Android</a>.<br />
+        A bar should pop up at the bottom of the page. Tap it and add it to your home sceen.<br />
+        IF you don't see the bar, tap the top right 3-dot menu > "Add to Home screen" to proceed.
+        <h3>To use it</h3>
+        After installed (added), in any Android app where you can select some text, select some, the menu options (COPY, SHARE, SELECT ALL, etc) would appear, tap SHARE. Then you will find this PWA in the list. Select it, then you will be directed to the <a href="https://youglish.com/" target="_blank" rel="noopener">YouGlish</a> search page shared text.
+      </p>
+
+    </div>
+  </div>
+
+  <div id="Redirect"></div>
+
+  <div>***</div>
+
+  <div id="output"><i>Below is for debug purpose only, please ignore</i></div>
+
+    <script>
+      'use strict';
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').then(registration => {
+          console.log('ServiceWorker registration successful with scope:',
+                    registration.scope);
+      }).catch(err => {
+        console.error('ServiceWorker registration failed:', err);
+      });
+    }
+    
+    function logText(message, isError) {
+      if (isError)
+        console.error(message);
+      else
+        console.log(message);
+      var p = document.createElement('p');
+      if (isError)
+        p.setAttribute('class', 'error');
+      document.querySelector('#output').appendChild(p);
+      p.appendChild(document.createTextNode(message));
+    }
+    
+    function onLoad() {
+      var parsedUrl = new URL(window.location.toString());
+      logText("Title shared: " + parsedUrl.searchParams.get("title"));
+      logText("Text shared: " + parsedUrl.searchParams.get("text"));
+      logText("URL shared: " + parsedUrl.searchParams.get("url"));
+      // We still have the old "url_template" member in the manifest, which is
+      // how WST was previously specced and implemented in Chrome. If the user
+      // agent uses that method, the "oldapi" parameter will be set.
+      if (parsedUrl.searchParams.get("oldapi")) {
+        logText("Your browser is using the deprecated 'url_template' Web Share "
+                + "Target API.", true);
+      }
+
+      if (parsedUrl.searchParams.get("text") != null){
+        
+        document.getElementById("Intro").style.display = "none" ;
+        document.getElementById("Redirect").innerHTML = "Redirecting..." ;
+
+        // when shared text is detected, replace location
+        window.location.replace("https://youglish.com/search/" + parsedUrl.searchParams.get("text") + "?");
+      }
+    }
+    window.addEventListener('load', onLoad);
+
+    </script>
+</body>
+</html>
